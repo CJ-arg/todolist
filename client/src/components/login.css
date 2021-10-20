@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap");
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../assets/images/cityT.png");
+  width: 120%;
+  height: 120%;
+  margin-top: -100px;
+  /* margin-top: -10%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+  height: 120vh;
+  font-family: "Bebas Neue", cursive;
+  font-family: "Cabin", sans-serif;
+  font-family: "Rubik", sans-serif;
+  margin-left: -100px;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm > h1 {
+  color: rgb(61, 175, 26);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 1px;
+  letter-spacing: 5px;
+  max-width: 300px;
+  background-color: rgba(255, 0, 149, 0.445);
+}
+.loginForm > input {
+  min-width: 300px;
+  padding: 17px;
+  font-size: 35px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  outline: none;
+  border: 1px solid rgba(2, 6, 41, 0.507);
+
+  font-family: "Rubik", sans-serif;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.loginButton {
+  min-width: 300px;
+  padding: 17px 30px;
+  margin-top: 20px;
+  background: rgb(26, 23, 194);
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-family: "Rubik", sans-serif;
+  border-radius: 2px;
+}
