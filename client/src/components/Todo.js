@@ -42,6 +42,7 @@ const Todo = ({ title, completed, removeTaskItemProp, editTaskPropItem }) => {
           onChange={handleOnChange}
           onKeyDown={handleOnKeyDown}
           placeholder="Edit a task..."
+          size="small"
           autoFocus={true}
           value={valueOption}
         />

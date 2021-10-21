@@ -5,7 +5,6 @@ import Form from "./Form";
 import Section from "./Section";
 import List from "./List";
 import Select from "./Select";
-
 import "./tasks.css";
 
 // const list = [
