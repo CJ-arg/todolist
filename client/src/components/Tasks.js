@@ -25,12 +25,10 @@ const Tasks = () => {
         // "https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8"
       );
       setTodoList(data);
-      console.log(data);
     }
     fechData();
     todolist && localStorage.setItem("todos", JSON.stringify(todolist));
   }, []);
-  console.log(todolist);
 
   const addTask = async (item) => {
     const { data } = await axios.post(
