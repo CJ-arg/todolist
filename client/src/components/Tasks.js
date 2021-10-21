@@ -21,17 +21,20 @@ const Tasks = () => {
   useEffect(() => {
     async function fechData() {
       const { data } = await axios.get(
-        "https://crudcrud.com/api/7d16698915b44aa0b7f084d0aa8c0b42/todo/"
+        "https://crudcrud.com/api/a747a8b6c64e4aa683994bd0be1b7e47/todo/"
         // "https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8"
       );
       setTodoList(data);
+      console.log(data);
     }
     fechData();
+    todolist && localStorage.setItem("todos", JSON.stringify(todolist));
   }, []);
   console.log(todolist);
+
   const addTask = async (item) => {
     const { data } = await axios.post(
-      "https://crudcrud.com/api/7d16698915b44aa0b7f084d0aa8c0b42/todo/",
+      "https://crudcrud.com/api/a747a8b6c64e4aa683994bd0be1b7e47/todo/",
       item
     );
     setTodoList((ant) => [...ant, data]);
@@ -39,7 +42,7 @@ const Tasks = () => {
 
   const removeTask = async (id) => {
     await axios.delete(
-      `https://crudcrud.com/api/7d16698915b44aa0b7f084d0aa8c0b42/todo/${id}`
+      `https://crudcrud.com/api/a747a8b6c64e4aa683994bd0be1b7e47/todo/${id}`
     );
     setTodoList((prevList) => prevList.filter((item) => item._id !== id));
     console.log(id);
