@@ -10,36 +10,40 @@ const Login = () => {
     email: "oscarfamado@gmail.com",
     password: "oscar123",
   };
-  let tokenR;
-  const randomBoolean = () => {
-    tokenR = Boolean(Math.ceil(Math.random() >= 0.5));
-  };
-
-  useEffect(() => {
-    randomBoolean();
-    settoken(tokenR);
-    console.log(tokenR);
-  }, []);
-
+  // let tokenR;
+  // const randomBoolean = () => {
+  //   tokenR = Boolean(Math.ceil(Math.random() >= 0.5));
+  // };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, settoken] = useState(false);
   const [error, setError] = useState(null);
 
+  useEffect(() => {
+    if (email === itemHard.email) settoken(true);
+  }, [email, itemHard.email]);
+
   const dispatch = useDispatch();
+
+  console.log(itemHard);
 
   const handleOnSubmitLogin = (e) => {
     e.preventDefault();
+
     if (!email.trim()) {
       setError("enter a valid email");
+      return;
+    }
+    if (email !== itemHard.email) {
+      setError("not registered email");
       return;
     }
     if (!password.trim()) {
       setError("enter a valid password");
       return;
     }
-    if (password.length < 6) {
-      setError("6 characters password");
+    if (password !== itemHard.password) {
+      setError("not registered password");
       return;
     }
 
