@@ -50,7 +50,9 @@ const Todo = ({ title, completed, removeTaskItemProp, editTaskPropItem }) => {
   ) : (
     <>
       <div className="col-sm-4" onDoubleClick={handleDiv}>
-        <h2 className={complete ? "completedColor" : ""}>{value}</h2>
+        <h2 className={complete ? "completedColor" : "taskDescription"}>
+          {value}
+        </h2>
       </div>
       <div className="col-sm-1">
         <Button

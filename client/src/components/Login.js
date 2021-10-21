@@ -12,11 +12,25 @@ const Login = () => {
   };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const dispatch = useDispatch();
 
   const handleOnSubmitLogin = (e) => {
     e.preventDefault();
+    if (!email.trim()) {
+      setError("enter a valid email");
+      return;
+    }
+    if (!password.trim()) {
+      setError("enter a valid password");
+      return;
+    }
+    if (password.length < 6) {
+      setError("6 characters password");
+      return;
+    }
+
     dispatch(
       login({
         email: email,
@@ -25,19 +39,20 @@ const Login = () => {
       })
     );
   };
-  const loginUser = React.useCallback(async (itemHard) => {
-    try { const res =
-      await axios.post('http://dev.nexttruck.draketechdev.ca:3600/api/login'), itemHard
+  // const loginUser = React.useCallback(async (itemHard) => {
+  //   try { const res =
+  //     await axios.post('http://dev.nexttruck.draketechdev.ca:3600/api/login'), itemHard
 
-    } catch (error) {
-      console.log(error)
-    }
-  } []);
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // } []);
 
   return (
     <div className="login">
       <form className="loginForm" onClick={handleOnSubmitLogin}>
         <h1> Login 🔐 </h1>
+        {error && <div className="error"> {error} </div>}
 
         <input
           type="email"

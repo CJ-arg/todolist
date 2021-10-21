@@ -15,10 +15,20 @@
   padding: 0;
   box-sizing: border-box; */
   height: 120vh;
-  font-family: "Bebas Neue", cursive;
-  font-family: "Cabin", sans-serif;
+
   font-family: "Rubik", sans-serif;
+
   margin-left: -100px;
+}
+.error {
+  color: rgb(255, 247, 247);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 1px;
+  letter-spacing: 5px;
+  max-width: 300px;
+  background-color: rgba(255, 0, 149, 0.281);
 }
 .loginForm {
   display: flex;
@@ -26,14 +36,14 @@
 }
 
 .loginForm > h1 {
-  color: rgb(61, 175, 26);
+  color: rgb(78, 255, 24);
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 18px;
   padding-bottom: 1px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   max-width: 300px;
-  background-color: rgba(255, 0, 149, 0.445);
+  background-color: rgba(255, 0, 149, 0.288);
 }
 .loginForm > input {
   min-width: 300px;
@@ -57,6 +67,6 @@
   border: none;
   color: white;
   font-size: 24px;
-  font-family: "Rubik", sans-serif;
   border-radius: 2px;
+  font-family: "Rubik", sans-serif;
 }
