@@ -7,13 +7,6 @@ import List from "./List";
 import Select from "./Select";
 import "./tasks.css";
 
-// const list = [
-//   { id: 1, title: "perueba 1 ", completed: false },
-//   { id: 2, title: "perueba 2 ", completed: false },
-//   { id: 3, title: "perueba 3 ", completed: false },
-//   { id: 4, title: "perueba 4 ", completed: false },
-// ];
-
 const Tasks = () => {
   const [todolist, setTodoList] = useState([]);
   const title = "CRUD APPLICATION";
@@ -22,7 +15,6 @@ const Tasks = () => {
     async function fechData() {
       const { data } = await axios.get(
         "https://crudcrud.com/api/a747a8b6c64e4aa683994bd0be1b7e47/todo/"
-        // "https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8"
       );
       setTodoList(data);
     }
