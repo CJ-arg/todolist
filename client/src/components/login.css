@@ -36,8 +36,10 @@
 }
 
 .loginForm > h1 {
-  color: rgb(78, 255, 24);
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
   font-size: 40px;
+
   font-weight: 700;
   margin-bottom: 18px;
   padding-bottom: 1px;
