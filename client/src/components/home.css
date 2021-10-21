@@ -55,3 +55,14 @@
 .userName {
   color: blueviolet;
 }
+
+.welcomeLorem {
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 18px;
+  padding-bottom: 1px;
+  letter-spacing: 3px;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.671);
+}

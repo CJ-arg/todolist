@@ -24,6 +24,16 @@ const Home = (props) => {
           <Link to="Tasks" className="link">
             <h2 className="welcome">📋 Welcome </h2>
           </Link>
+          <div className="welcomeLorem">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Accusantium debitis ex enim tenetur. Tempore totam ducimus nam,
+            alias iure reprehenderit sapiente maiores dicta nesciunt, pariatur
+            cupiditate perspiciatis consequatur, aliquam debitis! Lorem ipsum,
+            dolor sit amet consectetur adipisicing elit. Accusantium debitis ex
+            enim tenetur. Tempore totam ducimus nam, alias iure reprehenderit
+            sapiente maiores dicta nesciunt, pariatur cupiditate perspiciatis
+            consequatur, aliquam debitis!
+          </div>
         </>
       ) : (
         props.history.push("/")
