@@ -9,11 +9,11 @@ const Home = (props) => {
   const user = useSelector(selectUser);
   console.log(user);
   useEffect(() => {
-    if (user.token) {
+    if (user) {
       console.log("existe");
     } else {
       console.log("no existe");
-      props.history.push("/");
+      // props.history.push("/");
     }
   }, [props.history]);
 
