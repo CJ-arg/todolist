@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./login.css";
 import { useDispatch } from "react-redux";
 import { login } from "../Redux/userSlice";
@@ -10,8 +10,20 @@ const Login = () => {
     email: "oscarfamado@gmail.com",
     password: "oscar123",
   };
+  let tokenR;
+  const randomBoolean = () => {
+    tokenR = Boolean(Math.ceil(Math.random() >= 0.5));
+  };
+
+  useEffect(() => {
+    randomBoolean();
+    settoken(tokenR);
+    console.log(tokenR);
+  }, []);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [token, settoken] = useState(false);
   const [error, setError] = useState(null);
 
   const dispatch = useDispatch();
@@ -35,7 +47,7 @@ const Login = () => {
       login({
         email: email,
         password: password,
-        logged: true,
+        token: token,
       })
     );
   };

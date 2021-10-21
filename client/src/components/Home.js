@@ -7,9 +7,9 @@ import { withRouter } from "react-router";
 
 const Home = (props) => {
   const user = useSelector(selectUser);
-
+  console.log(user);
   useEffect(() => {
-    if (user) {
+    if (user.token) {
       console.log("existe");
     } else {
       console.log("no existe");
