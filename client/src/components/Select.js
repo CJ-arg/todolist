@@ -16,6 +16,7 @@ const Select = () => {
           <label> Select a country : </label>
 
           <select className="selectNames" onChange={(e) => changeCode(e)}>
+            <option value=""></option>
             <option value="AFG">Afghanistan</option>
             <option value="ALA">Åland Islands</option>
             <option value="ALB">Albania</option>
@@ -29,7 +30,7 @@ const Select = () => {
             <option value="ARG">Argentina</option>
             <option value="ARM">Armenia</option>
             <option value="ABW">Aruba</option>
-            <option value="AUS">Australia</option>
+            <option value="AUS"> Australia</option>
             <option value="AUT">Austria</option>
             <option value="AZE">Azerbaijan</option>
             <option value="BHS">Bahamas</option>
