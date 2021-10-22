@@ -25,7 +25,7 @@ const Login = () => {
 
   const dispatch = useDispatch();
 
-  console.log(itemHard);
+  // console.log(itemHard);
 
   const handleOnSubmitLogin = (e) => {
     e.preventDefault();
@@ -66,32 +66,38 @@ const Login = () => {
 
   return (
     <div className="login">
-      <form className="loginForm" onClick={handleOnSubmitLogin}>
-        <h1> Login 🔐 </h1>
-        {error && <div className="error"> {error} </div>}
+      <img className="blobOne" src="/background-blob-1.png" alt="blob" />
+      <img className="blobTwo" src="/background-blob-1.png" alt="blob" />
+      <img className="blobThree" src="/background-blob-1.png" alt="blob" />
 
-        <input
-          type="email"
-          placeholder="Mail..."
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password..."
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <Link to="Home" className="link">
-          <button
-            type="submit"
-            className="loginButton"
-            // onClick={(e) => handleOnSubmitLogin(e)}
-          >
-            Submit
-          </button>
-        </Link>
-      </form>
+      <div className="loginContainer">
+        <div className="titleContainer">
+          <h1>Login</h1>
+        </div>
+        <div className="formContainer">
+          <form className="loginForm" onClick={handleOnSubmitLogin}>
+            {error && <div className="error"> {error} </div>}
+
+            <input
+              type="email"
+              placeholder="Mail..."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password..."
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <Link to="Home" className="link">
+              <button type="submit" className="loginButton">
+                Submit
+              </button>
+            </Link>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
