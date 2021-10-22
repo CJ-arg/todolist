@@ -4,10 +4,10 @@ body {
 }
 .blobOneTasks {
   width: 550px;
-  margin-left: -200px;
+  margin-left: -10px;
   position: absolute;
-  transform: rotate(1deg);
-  margin-top: -110px;
+  transform: rotate(30deg);
+  margin-top: -100px;
   z-index: -3;
   overflow: hidden;
 }
