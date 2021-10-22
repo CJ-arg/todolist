@@ -14,7 +14,7 @@ const Tasks = () => {
   useEffect(() => {
     async function fechData() {
       const { data } = await axios.get(
-        "https://crudcrud.com/api/a747a8b6c64e4aa683994bd0be1b7e47/todo/"
+        "https://crudcrud.com/api/9a63c578d27049459a593c08e64d2bdb/todo/"
       );
       setTodoList(data);
     }
@@ -24,7 +24,7 @@ const Tasks = () => {
 
   const addTask = async (item) => {
     const { data } = await axios.post(
-      "https://crudcrud.com/api/a747a8b6c64e4aa683994bd0be1b7e47/todo/",
+      "https://crudcrud.com/api/9a63c578d27049459a593c08e64d2bdb/todo/",
       item
     );
     setTodoList((ant) => [...ant, data]);
@@ -32,7 +32,7 @@ const Tasks = () => {
 
   const removeTask = async (id) => {
     await axios.delete(
-      `https://crudcrud.com/api/a747a8b6c64e4aa683994bd0be1b7e47/todo/${id}`
+      `https://crudcrud.com/api/9a63c578d27049459a593c08e64d2bdb/todo/${id}`
     );
     setTodoList((prevList) => prevList.filter((item) => item._id !== id));
     console.log(id);
@@ -40,13 +40,14 @@ const Tasks = () => {
 
   const editTask = async (id, item) => {
     await axios.put(
-      `https://crudcrud.com/api/7d16698915b44aa0b7f084d0aa8c0b42/todo/${id}`,
+      `https://crudcrud.com/api/9a63c578d27049459a593c08e64d2bdb/todo/${id}`,
       item
     );
   };
   return (
     <div className="container-fluid">
       <Section>
+        <img className="blobOne" src="/background-blob-1.png" alt="blob" />
         <h1>{title}</h1>
       </Section>
       <Section>
