@@ -4,9 +4,12 @@
   background-color: rgb(255, 255, 255);
   text-align: start;
 }
-
+.todoButton {
+  border: 1px black solid;
+}
 .todoButton2 {
   display: flex;
+
   align-items: flex-start;
 }
 .priority {
