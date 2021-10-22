@@ -47,7 +47,7 @@ const Tasks = () => {
   return (
     <div className="container-fluid">
       <Section>
-        <img className="blobOne" src="/background-blob-1.png" alt="blob" />
+        <img className="blobOneTasks" src="/background-blob-1.png" alt="blob" />
         <h1>{title}</h1>
       </Section>
       <Section>
